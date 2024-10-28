@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Brain Rot TikToks of the Week</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Compliment Generator</a>
+        <a href="tiktoks.html">Top TikToks</a>
+    </nav>
+    <div class="container">
+        <h1>Top 10 Brain Rot TikToks of the Week</h1>
+        <ul id="tiktok-list"></ul>
+    </div>
+    <script>
+        const tiktoks = [
+            "TikTok 1: Hilarious Animal Reactions",
+            "TikTok 2: The Ultimate Dance Compilation",
+            "TikTok 3: Weird Food Combos That Somehow Work",
+            "TikTok 4: Mind-Blowing Optical Illusions",
+            "TikTok 5: The Best Fails of the Week",
+            "TikTok 6: Satisfying ASMR Moments",
+            "TikTok 7: Funniest Sibling Pranks",
+            "TikTok 8: Cooking Disaster Videos",
+            "TikTok 9: Craziest Celebrity Moments",
+            "TikTok 10: Random Life Hacks You Never Knew"
+        ];
+
+        const tiktokList = document.getElementById("tiktok-list");
+        tiktoks.forEach(tiktok => {
+            const listItem = document.createElement("li");
+            listItem.textContent = tiktok;
+            tiktokList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
