@@ -131,7 +131,7 @@ function generateCompliment() {
     document.getElementById("compliment").innerText = compliments[randomIndex];
     const img = document.getElementById("complimentImage");
 
-    if (complimentText === "You're the best peach.") {
+    if (complimentText === complimentText) {
         img.src = "https://static-00.iconduck.com/assets.00/peach-emoji-2044x2048-4w90ze9r.png"; // Replace with your peach image URL
         img.style.display = "block";
     } else {
