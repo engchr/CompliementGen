@@ -8,8 +8,6 @@ const compliments = [
     "You're a ray of sunshine!",
     "You bring out the best in everyone around you.",
     "You’re always thinking of new ways to be kind.",
-    "You have such a unique perspective.",
-    "You're stronger than you think.",
     "You’re one in a million!",
     "You're brave and resilient.",
     "Everyday I wonder when the next time I get to hear you again",
@@ -88,7 +86,6 @@ const compliments = [
     "You’re an inspiration to everyone around you.",
     "You have a heart full of compassion.",
     "You're incredibly thoughtful and caring.",
-    "You make everyone feel included.",
     "You have a beautiful heart.",
 
     "You have a contagious smile.",
