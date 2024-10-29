@@ -1,6 +1,5 @@
 const compliments = [
     "You're an amazing person!",
-    "Your smile lights up the room!",
     "You have a great sense of humor!",
     "You're incredibly thoughtful!",
     "Your creativity is inspiring!",
@@ -13,7 +12,6 @@ const compliments = [
     "You make life more fun just by being yourself.",
     "You're wise beyond your years.",
     "You’re always thinking of new ways to be kind.",
-    "You have an incredible mind! 🤯",
     "Your optimism is refreshing.",
     "You have such a unique perspective.",
     "You're stronger than you think.",
@@ -72,7 +70,6 @@ const compliments = [
     "You have a heart full of love.",
     "You bring positivity to every room.",
     "You're thoughtful and caring.",
-    "OI OI OI BAKA.",
     "You make the world a better place.",
     "You’re wonderfully unique.",
     "You give people so much joy.",
@@ -81,7 +78,6 @@ const compliments = [
     "You make everything feel like an adventure.",
     "You always know how to make people laugh.",
     "You’re truly unforgettable.",
-    "Your empathy is amazing.",
     "You’re incredibly thoughtful.",
     "You're wonderfully authentic.",
     "You’re a one-of-a-kind friend.",
@@ -90,34 +86,56 @@ const compliments = [
     "You make people feel valued.",
     "You light up the room.",
     "You radiate positivity.",
-    "You have a peaceful presence.",
-    "You’re a true friend to all.",
     "You're genuinely caring.",
     "You have a sharp and curious mind.",
-    "If I could ask you a question. It would be how did I get so lucky to have you in my life?",
-    "You're an inspiration to many.",
     "You are deeply compassionate.",
     "You're truly remarkable!",
     "You have a generous spirit.",
-    "You have a contagious smile.",
     "You always see the good in others.",
     "You make every day brighter.",
-    "You are all that and a bag of chips.",
-    "You make everyone smile no matter where you go.",
-
     "You’re an inspiration to everyone around you.",
     "You have a heart full of compassion.",
-    "You’re a beacon of hope.",
     "You're incredibly thoughtful and caring.",
     "You make everyone feel included.",
     "You have a beautiful heart.",
+
+    "You have a contagious smile.",
     "You make life so much more enjoyable.",
-    "You bring a special spark to life!",
+    "You have an incredible mind! 🤯",
     "You're the best peach.",
+    "You make everyone smile no matter where you go.",
+    "You are all that and a bag of chips.",
+    "If I could ask you a question. It would be how did I get so lucky to have you in my life?",
+    "OI OI OI BAKA.",
+    "Your smile lights up the room!",
+
+
 
 ];
 
+const recentIndexes = []; // Stores the last 10 indexes used
+const memorySize = 10;    // Limit for recentIndexes to track last 10 choices
+
 function generateCompliment() {
-    const randomIndex = Math.floor(Math.random() * compliments.length);
+    // Filter out recent indexes from the full range of compliments
+    const availableIndexes = compliments
+        .map((_, index) => index)
+        .filter(index => !recentIndexes.includes(index));
+
+    // If no available index left, reset the recentIndexes list
+    if (availableIndexes.length === 0) {
+        recentIndexes.shift(); // Remove oldest index to free up space
+    }
+
+    // Select a random index from the remaining choices
+    const randomIndex = availableIndexes[Math.floor(Math.random() * availableIndexes.length)];
+
+    // Add the selected index to recent history and maintain memory limit
+    recentIndexes.push(randomIndex);
+    if (recentIndexes.length > memorySize) {
+        recentIndexes.shift();
+    }
+
+    // Display the compliment
     document.getElementById("compliment").innerText = compliments[randomIndex];
 }
