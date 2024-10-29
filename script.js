@@ -114,7 +114,7 @@ const compliments = [
 ];
 
 const recentIndexes = []; // Stores the last 10 indexes used
-const memorySize = 10;    // Limit for recentIndexes to track last 10 choices
+const memorySize = 12;    // Limit for recentIndexes to track last 10 choices
 
 function generateCompliment() {
     // Filter out recent indexes from the full range of compliments
