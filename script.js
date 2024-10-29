@@ -4,23 +4,15 @@ const compliments = [
     "You're incredibly thoughtful!",
     "Your creativity is inspiring!",
     "You make a difference in people's lives!",
-    "You're a true friend!",
-    "You got hella rizz, more than any ohio gyatt.",
     "You have a heart of gold!",
     "You're a ray of sunshine!",
     "You bring out the best in everyone around you.",
-    "You make life more fun just by being yourself.",
-    "You're wise beyond your years.",
     "You’re always thinking of new ways to be kind.",
-    "Your optimism is refreshing.",
     "You have such a unique perspective.",
     "You're stronger than you think.",
     "You’re one in a million!",
-    "You have a gift for making people comfortable.",
-    "You bring so much joy to those around you.",
     "You're brave and resilient.",
     "Everyday I wonder when the next time I get to hear you again",
-    "Your laughter is contagious.",
     "You see beauty in the simplest things.",
     "You make others feel valued and important.",
     "You have a beautiful soul.",
@@ -80,7 +72,7 @@ const compliments = [
     "You’re truly unforgettable.",
     "You’re incredibly thoughtful.",
     "You're wonderfully authentic.",
-    "You’re a one-of-a-kind friend.",
+    "You’re a one-of-a-kind.",
     "You’re endlessly supportive.",
     "Your enthusiasm is inspiring.",
     "You make people feel valued.",
@@ -107,9 +99,10 @@ const compliments = [
     "You are all that and a bag of chips.",
     "If I could ask you a question. It would be how did I get so lucky to have you in my life?",
     "OI OI OI BAKA.",
+    "Everyday I wonder when the next time I get to hear you again",
     "Your smile lights up the room!",
-
-
+    "You got hella rizz, more than any ohio gyatt.",
+    "You make life more fun just by being yourself.",
 
 ];
 
@@ -137,5 +130,16 @@ function generateCompliment() {
     }
 
     // Display the compliment
+    const complimentText = compliments[randomIndex];
     document.getElementById("compliment").innerText = compliments[randomIndex];
+    const img = document.getElementById("complimentImage");
+
+    if (complimentText === "You're the best peach.") {
+        img.src = "https://static-00.iconduck.com/assets.00/peach-emoji-2044x2048-4w90ze9r.png"; // Replace with your peach image URL
+        img.style.display = "block";
+    } else {
+        // Hide the image if the compliment does not require it
+        img.style.display = "none";
+    }
+
 }
