@@ -29,7 +29,7 @@ const compliments = [
     "You make others feel valued and important.",
     "You have a beautiful soul.",
     "You’re a true original!",
-    "Yo"
+    "Yo",
     "You're an incredible problem-solver.",
     "You handle challenges with such grace.",
     "You bring out the best in others.",
