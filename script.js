@@ -76,7 +76,6 @@ const compliments = [
     "You have a heart full of compassion.",
     "You're incredibly thoughtful and caring.",
     "You have a beautiful heart.",
-
     "You have a contagious smile.",
     "You make life so much more enjoyable.",
     "You have an incredible mind! 🤯",
