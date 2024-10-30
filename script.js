@@ -133,14 +133,16 @@ function generateCompliment() {
     if (complimentText === "Your confidence is fierce and amazing #GILRPOWER!") {
         img.src = "https://media.tenor.com/tJTvTz9O4oIAAAAj/raised-fist-raise-your-fist.gif"; // Replace with your peach image URL
         img.style.display = "block";
+    }
     
     if (complimentText === "You're the best peach.") {
         img.src = "https://static-00.iconduck.com/assets.00/peach-emoji-2044x2048-4w90ze9r.png"; // Replace with your peach image URL
         img.style.display = "block";
     
-    } else {
+    } 
+    else {
         // Hide the image if the compliment does not require it
         img.style.display = "none";
     }
 
-}
+}}
