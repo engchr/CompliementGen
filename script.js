@@ -35,16 +35,13 @@ const compliments = [
     "You bring so much happiness to those around you.",
     "You see the world in a unique way.",
     "You are a true gift to those in your life.",
-    "Your confidence is inspiring!",
     "You make people feel seen and heard.",
     "You're a ray of light in a dark world.",
     "You radiate warmth and friendliness.",
     "You're always full of great ideas.",
     "You make things better just by showing up.",
     "You’re incredibly talented!",
-    "You always find the silver lining.",
     "You’re a joy to be around.",
-    "You're strong like a bull and kinder than an angel.",
     "You have a wonderful sense of humor.",
     "You bring out the best in people.",
     "You’re always striving to be the best you can be.",
@@ -53,7 +50,6 @@ const compliments = [
     "You have such a kind heart.",
     "You inspire others to be their best selves.",
     "You're a bright spot in everyone's day.",
-    "You are wise beyond your years.",
     "You handle everything with such grace.",
     "You are so generous with your time and energy.",
     "You’re a breath of fresh air!",
@@ -67,21 +63,14 @@ const compliments = [
     "You have such an adventurous spirit!",
     "You make everything feel like an adventure.",
     "You always know how to make people laugh.",
-    "You’re truly unforgettable.",
-    "You’re incredibly thoughtful.",
-    "You're wonderfully authentic.",
-    "You’re a one-of-a-kind.",
-    "You’re endlessly supportive.",
     "Your enthusiasm is inspiring.",
     "You make people feel valued.",
     "You light up the room.",
     "You radiate positivity.",
     "You're genuinely caring.",
-    "You have a sharp and curious mind.",
     "You are deeply compassionate.",
     "You're truly remarkable!",
     "You have a generous spirit.",
-    "You always see the good in others.",
     "You make every day brighter.",
     "You’re an inspiration to everyone around you.",
     "You have a heart full of compassion.",
@@ -100,6 +89,12 @@ const compliments = [
     "Your smile lights up the room!",
     "You got hella rizz, more than any ohio gyatt.",
     "You make life more fun just by being yourself.",
+    "You have an amazing mind.",
+    "You are destined for great things.",
+    "You're strong like a bull and kinder than an angel.",
+    "Even when we are quiet, it is still the best moments in my life.",
+    "Your confidence is fierce and amazing #GILRPOWER!",
+    "You are so skibidi, even the rizzler thinks you are cool.",
 
 ];
 
@@ -134,6 +129,15 @@ function generateCompliment() {
     if (complimentText === "You're the best peach.") {
         img.src = "https://static-00.iconduck.com/assets.00/peach-emoji-2044x2048-4w90ze9r.png"; // Replace with your peach image URL
         img.style.display = "block";
+
+    if (complimentText === "Your confidence is fierce and amazing #GILRPOWER!") {
+        img.src = "https://media.tenor.com/tJTvTz9O4oIAAAAj/raised-fist-raise-your-fist.gif"; // Replace with your peach image URL
+        img.style.display = "block";
+    
+    if (complimentText === "You're the best peach.") {
+        img.src = "https://static-00.iconduck.com/assets.00/peach-emoji-2044x2048-4w90ze9r.png"; // Replace with your peach image URL
+        img.style.display = "block";
+    
     } else {
         // Hide the image if the compliment does not require it
         img.style.display = "none";
