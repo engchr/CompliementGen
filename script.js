@@ -60,8 +60,6 @@ const compliments = [
     "You’re wonderfully unique.",
     "You give people so much joy.",
     "You’re a beautiful person inside and out.",
-    "You have such an adventurous spirit!",
-    "You make everything feel like an adventure.",
     "You always know how to make people laugh.",
     "Your enthusiasm is inspiring.",
     "You make people feel valued.",
@@ -76,6 +74,8 @@ const compliments = [
     "You have a heart full of compassion.",
     "You're incredibly thoughtful and caring.",
 
+    "Your racism know no bounds 😊",
+    "Always know how to lift the mood",
     "Always a true empath",
     "You have a contagious smile.",
     "You make life so much more enjoyable.",
