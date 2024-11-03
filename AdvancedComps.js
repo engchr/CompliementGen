@@ -1,8 +1,7 @@
-
 const Groq = require("groq-sdk");
 
 const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY, // Make sure to set this in Vercel environment variables
+  apiKey: "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" // Placeholder for API key
 });
 
 module.exports = async (req, res) => {
@@ -19,10 +18,10 @@ module.exports = async (req, res) => {
       messages: [
         {
           role: "user",
-          content: `Generate a compliment for someone based on these details: ${userDetails}`,
-        },
+          content: `Generate a compliment for someone based on these details: ${userDetails}`
+        }
       ],
-      model: "llama3-8b-8192",
+      model: "llama3-8b-8192"
     });
 
     const compliment = response.choices[0]?.message?.content || "You're amazing!";
