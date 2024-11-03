@@ -5,7 +5,10 @@
     ],
     "routes": [
       { "src": "/api/generateCompliment", "dest": "/api/AdvancedComps.js" },
-      { "src": "/(.*)", "dest": "/public/AdvancedComp.html" }
+      { "src": "/index", "dest": "/public/index.html" },
+      { "src": "/AdvancedComp", "dest": "/public/AdvancedComp.html" },
+      { "src": "/tiktoks", "dest": "/public/tiktoks.html" },
+      { "src": "/(.*)", "dest": "/public/index.html" }
     ]
   }
   
