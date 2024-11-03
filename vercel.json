@@ -1,11 +1,11 @@
 {
     "builds": [
-      { "src": "/AdvancedComps.js", "use": "@vercel/node" },
-      { "src": "/index.html", "use": "@vercel/static" }
+      { "src": "api/AdvancedComps.js", "use": "@vercel/node" },
+      { "src": "public/index.html", "use": "@vercel/static" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/AdvancedComps.js" },
-      { "src": "/(.*)", "dest": "/index.html" }
+      { "src": "/api/generateCompliment", "dest": "/api/AdvancedComps.js" },
+      { "src": "/(.*)", "dest": "/public/index.html" }
     ]
   }
   
