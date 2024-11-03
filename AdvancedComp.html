@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliment Generator</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Compliment Generator</a>
+        <a href="tiktoks.html">Top TikToks</a>
+        <a href="AdvancedComp.html">Top TikToks</a>
+    </nav>
+    <header class="banner">
+        <h1>Get Inspired with a Compliment!</h1>
+        <p>Your daily dose of positivity. Brought to you by CHRIS and Co.</p>
+    </header>
+<body>
+    <h1>Compliment Generator</h1>
+    <form id="complimentForm">
+        <label for="details">Enter some details about yourself:</label><br>
+        <textarea id="details" rows="4" cols="50" placeholder="E.g., I'm hardworking, love nature, etc."></textarea><br><br>
+        <button type="submit">Generate Compliment</button>
+    </form>
+    <div id="complimentOutput"></div>
+
+    <script>
+        const form = document.getElementById("complimentForm");
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const userDetails = document.getElementById("details").value;
+            const outputDiv = document.getElementById("complimentOutput");
+
+            try {
+                const response = await fetch('/api/generateCompliment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ userDetails })
+                });
+                
+                const data = await response.json();
+                outputDiv.innerHTML = `<p>${data.compliment}</p>`;
+            } catch (error) {
+                outputDiv.innerHTML = `<p>Error generating compliment.</p>`;
+                console.error("Error:", error);
+            }
+        });
+    </script>
+</body>
+</html>
