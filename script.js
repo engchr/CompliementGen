@@ -133,7 +133,7 @@ function generateCompliment() {
     } else if (complimentText === "Your confidence is fierce and amazing #GILRPOWER!") {
         img.src = "https://media.tenor.com/tJTvTz9O4oIAAAAj/raised-fist-raise-your-fist.gif"; // Replace with your peach image URL
         img.style.display = "block";
-    } else if (complimentText === "Your confidence is fierce and amazing #GILRPOWER!") {
+    } else if (complimentText === "You are all that and a bag of chips.") {
             img.src = i-love-chips-yummy-unscreen.gif ; // Replace with your peach image URL
             img.style.display = "block";
     } else {
