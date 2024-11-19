@@ -10,7 +10,7 @@
         "use": "@vercel/static"
       },
       {
-        "src": "src/Scripts/*.js",
+        "src": "Source/Scripts/*.js",
         "use": "@vercel/node"
       }
     ],
