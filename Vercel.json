@@ -2,17 +2,22 @@
     "version": 2,
     "builds": [
       {
-        "src": "src/components/AdvancedComps.js",
-        "use": "@vercel/node"
+        "src": "pages/*.html",
+        "use": "@vercel/static"
       },
       {
-        "src": "src/scripts/*.js",
+        "src": "Source/Styles/*.css",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "Source/Scripts/*.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
-      { "src": "/public/(.*)", "dest": "/public/$1" },
-      { "src": "/(.*)", "dest": "/public/index.html" }
+      { "src": "/styles/(.*)", "dest": "/Source/Styles/$1" },
+      { "src": "/scripts/(.*)", "dest": "/Source/Scripts/$1" },
+      { "src": "/(.*)", "dest": "/pages/$1" }
     ]
   }
   
